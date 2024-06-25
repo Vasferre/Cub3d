@@ -1,4 +1,4 @@
-#include "cub3d.h"
+#include "../includes/cub3d.h"
 
 //verifica a extencao do ficheiro
 static int extension_verif(char *argv)
