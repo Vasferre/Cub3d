@@ -11,7 +11,14 @@ void loop_game(void *ml)
     cast_rays(mlx);
     mlx_image_to_window(mlx->mlx_ptr, mlx->img, 0, 0);
 }
+void
 
 
+int main() // main function
+{
+ t_game *game;
 
-int main ()
+	game = init_argumet(); // init the data structure
+	start_the_game(game); // start the game
+	return 0;
+}
