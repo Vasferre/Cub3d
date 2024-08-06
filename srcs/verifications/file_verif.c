@@ -1,7 +1,7 @@
-#include "../includes/cub3d.h"
+#include "../../includes/cub3d.h"
 
 //verifica a extencao do ficheiro
-static int extension_verif(char *argv)
+int extension_verif(char *argv)
 {
     int i;
 
@@ -16,13 +16,8 @@ static int extension_verif(char *argv)
     return (0);
 }
 
-static int check_Wall(char **map)
+void ft_spaces_or_tabs(char *line)
 {
-
-}
-
-static int char_check(t_game *game)
-{
-    int i;
-    int j;
+    if (line[0] == ' ' || line[0] == '\t')
+        ft_mperror("Invalid spaces or tabs");
 }

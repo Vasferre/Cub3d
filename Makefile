@@ -1,22 +1,13 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/21 16:35:56 by vasferre          #+#    #+#              #
-#    Updated: 2024/06/21 16:39:30 by vasferre         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
-NAME = cub3d
+NAME = cub3D
 CC = cc -Wall -Wextra -Werror
 RM = rm -rf
-MLXFLAGS = -L ./libs/mlx -lmlx -Ilmlx -lXext -lX11
-LIBFT = ./libs/libft/libft.a
+MLXFLAGS = -L ./libs/mlx -lm -Ilmlx -lXext -lX11
+LIBFT = ./libs/libft/libft.a ./libs/get_next_line/get_next_line.a
 
-SRCS = ./srcs/cub3d.c ./srcs/map_verif.c
+SRCS = ./srcs/destroy/free_all.c ./srcs/player/movement.c ./srcs/player/player_check.c \
+	./srcs/verifications/file_verif.c ./srcs/verifications/map_verif_utils.c ./srcs/verifications/map_verif.c \
+	./srcs/cub3d.c ./srcs/Error.c ./srcs/ft_init.c ./srcs/init_map.c ./srcs/keys.c ./srcs/raycaster.c
 	   
 OBJS = ${SRCS:.c=.o}
 
