@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <math.h>
-#include "../libs/mlx/mlx.h"
+#include "../mlx/mlx.h"
 #include "../libs/get_next_line/get_next_line.h"
 
 #define ESC 65307

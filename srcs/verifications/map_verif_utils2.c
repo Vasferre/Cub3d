@@ -32,7 +32,7 @@ void	get_map_array(t_map *map, int map_file)
 			map->map_array[i][j] = line[j];
 			j++;
 		}
-		ft_fill_and_replace(map, i, &j);
+		ft_replace(map, i, &j);
 		map->map_array[i][j] = '\0';
 		free(line);
 		i++;

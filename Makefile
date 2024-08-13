@@ -2,7 +2,7 @@
 NAME = cub3D
 CC = cc -Wall -Wextra -Werror
 RM = rm -rf
-MLXFLAGS = -L ./libs/mlx -lm -Ilmlx -lXext -lX11
+MLXFLAGS = -L ./mlx -lm -Ilmlx -lXext -lX11
 LIBFT = ./libs/libft/libft.a ./libs/get_next_line/get_next_line.a
 
 SRCS = ./srcs/destroy/free_all.c ./srcs/player/movement.c ./srcs/player/player_check.c \
@@ -17,7 +17,7 @@ OBJS = ${SRCS:.c=.o}
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	$(MAKE) --no-print-directory -C ./libs/mlx
+	$(MAKE) --no-print-directory -C ./mlx
 	$(MAKE) --no-print-directory -C ./libs/libft
 	$(CC) $(OBJS) $(LIBFT) $(MLXFLAGS) -o $(NAME)
 
