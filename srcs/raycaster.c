@@ -12,7 +12,7 @@ void	ft_ray_length(t_ray *ray)
 		ray->delta_y = fabs(1 / ray->ray_dir_y);
 }
 
-void ft_rays(t_ray *ray, t_player *player, t_map *map)
+void ft_rays_side_dist(t_ray *ray, t_player *player, t_map *map)
 {
     if (ray->ray_dir_x < 0)
 	{

@@ -23,7 +23,7 @@ void	ft_create_map_image(t_mlx *mlx)
 	t_data	map;
 
 	map.img = mlx_new_image(mlx->mlx, SCREEN_WIDHT, SCREEN_HEIGHT);
-	map.addr = mlx_get_data_adr(map.img, &map.bits_per_pixel,
+	map.adr = mlx_get_data_addr(map.img, &map.bits_px,
 			&map.line_len, &map.endian);
 	mlx->map = map;
 }
@@ -44,18 +44,17 @@ int	ft_render_map(t_game *game)
 	{
 		j = -1;
 		if (i < SCREEN_HEIGHT / 2)
-			color = ft_create_argb(TRANSPARENCY, game->tinfo->ceil[0],
-					game->tinfo->ceil[1], game->tinfo->ceil[2]);
+			color = ft_create_argb(TRANSPARENCY, game->info->ceil[0],
+					game->info->ceil[1], game->info->ceil[2]);
 		else
-			color = ft_create_argb(TRANSPARENCY, game->tinfo->floor[0],
-					game->tinfo->floor[1], game->tinfo->floor[2]);
-		while (++j < SCREEN_WIDTH)
+			color = ft_create_argb(TRANSPARENCY, game->info->floor[0],
+					game->info->floor[1], game->info->floor[2]);
+		while (++j < SCREEN_WIDHT)
 			my_mlx_pixel_put(&game->mlx->map, j, i, color);
 	}
-	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win,
+	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win_ptr,
 		game->mlx->map.img, 0, 0);
 	ft_cast_rays(game);
-	ft_render_mini_map(game->mlx, game->map, game->player, game->rays);
-	ft_movements(game, game->player, game->moves);
+	ft_moves(game, game->player, game->moves);
 	return (0);
 }

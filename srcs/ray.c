@@ -34,12 +34,25 @@ void	create_rays(t_game *game)
 	i = 0;
 	head = new_ray();
 	current = head;
-	while (++i < SCREEN_WIDTH)
+	while (++i < SCREEN_WIDHT)
 	{
 		current = new_ray();
 		add_ray(&head, current);
 	}
 	game->rays = head;
+}
+
+t_ray	*new_ray(void)
+{
+	t_ray	*node;
+
+	node = malloc(sizeof(t_ray));
+	if (node == NULL)
+		return (NULL);
+	node->ray_dir_x = 0;
+	node->ray_dir_y = 0;
+	node->next = NULL;
+	return (node);
 }
 
 void	ft_cast_rays(t_game *game)
@@ -49,16 +62,16 @@ void	ft_cast_rays(t_game *game)
 
 	head = game->rays;
 	i = -1;
-	while (++i < SCREEN_WIDTH)
+	while (++i < SCREEN_WIDHT)
 	{
 		ft_init_ray(game, game->player, i);
-		ft_set_ray_length(game->rays);
-		ft_set_step_and_side_dist(game->rays, game->player, game->map);
-		ft_dda_algorithm(game, game->rays, game->map);
+		ft_ray_length(game->rays);
+		ft_rays_side_dist(game->rays, game->player, game->map);
+		ft_algorithm(game, game->rays, game->map);
 		ft_draw(game->rays, game, i);
 		game->rays = game->rays->next;
 	}
-	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win,
+	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win_ptr,
 		game->mlx->map.img, 0, 0);
 	game->rays = head;
 }
