@@ -6,11 +6,11 @@
 /*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:55:15 by vasferre          #+#    #+#             */
-/*   Updated: 2022/11/08 16:34:26 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/14 17:10:51 by vasferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static int	ft_set(char c, const char *set)
 {

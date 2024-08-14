@@ -6,11 +6,11 @@
 /*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:56:33 by vasco             #+#    #+#             */
-/*   Updated: 2022/11/08 17:56:04 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/14 17:10:33 by vasferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {

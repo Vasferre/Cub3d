@@ -6,11 +6,11 @@
 /*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:09:41 by vasco             #+#    #+#             */
-/*   Updated: 2022/11/08 17:55:34 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/14 17:10:43 by vasferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
