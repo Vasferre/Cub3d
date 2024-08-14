@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   raycaster.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:57 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:57:10 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	ft_ray_length(t_ray *ray)
@@ -12,9 +24,9 @@ void	ft_ray_length(t_ray *ray)
 		ray->delta_y = fabs(1 / ray->ray_dir_y);
 }
 
-void ft_rays_side_dist(t_ray *ray, t_player *player, t_map *map)
+void	ft_rays_side_dist(t_ray *ray, t_player *player, t_map *map)
 {
-    if (ray->ray_dir_x < 0)
+	if (ray->ray_dir_x < 0)
 	{
 		ray->step_x = -1;
 		ray->side_x = (player->x - map->map_x) * ray->delta_x;

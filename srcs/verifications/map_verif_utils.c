@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map_verif_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:15 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:34:34 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/cub3d.h"
 
-void ft_replace(t_map *map, int i, int *j)
+void	ft_replace(t_map *map, int i, int *j)
 {
-    int index;
+	int	index;
 
-    index = -1;
-    while(map->map_array[i][++index])
-    {
-        if (map->map_array[i][index] == ' ')
-            map->map_array[i][index] = '0';
-    }
-    while(*j < map->n_col)
-        map->map_array[i][(*j)++] = '-';
+	index = -1;
+	while (map->map_array[i][++index])
+	{
+		if (map->map_array[i][index] == ' ')
+			map->map_array[i][index] = '0';
+	}
+	while (*j < map->n_col)
+		map->map_array[i][(*j)++] = '-';
 }
 
 bool	ft_str_is_map_type(char *str)
@@ -59,7 +71,8 @@ bool	ft_check_map(t_map *map, t_player *player)
 		j = 0;
 		while (map->map_array[i][j])
 		{
-			if (player_check(map->map_array[i][j]) || map->map_array[i][j] == '0')
+			if (player_check(map->map_array[i][j])
+				|| map->map_array[i][j] == '0')
 			{
 				if (!ft_check_sides(map, i, j)
 					|| !ft_init_player(map->map_array[i][j], j, i, player))

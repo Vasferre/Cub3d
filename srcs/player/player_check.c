@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   player_check.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:48:55 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:26:32 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/cub3d.h"
 
-bool player_check(char c)
+bool	player_check(char c)
 {
-    if(c ==  'N' || c == 'S' || c == 'W' || c == 'E')
-        return(true);
-    return(false);
+	if (c == 'N' || c == 'S' || c == 'W' || c == 'E')
+		return (true);
+	return (false);
 }

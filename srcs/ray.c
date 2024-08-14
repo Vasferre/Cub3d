@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ray.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:54 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:56:38 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 t_ray	*last_ray(t_ray *lst)
@@ -23,7 +35,6 @@ void	add_ray(t_ray **lst, t_ray *new)
 	tail = last_ray(*lst);
 	tail->next = new;
 }
-
 
 void	create_rays(t_game *game)
 {

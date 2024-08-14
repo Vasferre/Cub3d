@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   file_verif.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:10 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:33:44 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/cub3d.h"
 
-void ft_spaces_or_tabs(char *line, t_game *game)
+void	ft_spaces_or_tabs(char *line, t_game *game)
 {
-    if (line[0] == ' ' || line[0] == '\t')
-        ft_mperror("Invalid spaces or tabs", game);
+	if (line[0] == ' ' || line[0] == '\t')
+		ft_mperror("Invalid spaces or tabs", game);
 }
 
 void	get_textures(t_game *game, char *line, int fd)
@@ -53,7 +65,6 @@ bool	ft_is_valid_file(char *str, t_game *game)
 
 void	ft_initial_validation(char *str, t_game *game)
 {
-	
 	if (!ft_valid_extension(str, ".cub"))
 		ft_mperror("invalid extension", game);
 	if (!ft_is_valid_file(str, game))

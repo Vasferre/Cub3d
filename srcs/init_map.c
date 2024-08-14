@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:45 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:46:26 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	ft_init_ray(t_game *game, t_player *player, int i)
 {
 	game->map->map_x = (int)player->x;
 	game->map->map_y = (int)player->y;
-	game->camera_x = 2 * i / (double)SCREEN_WIDHT- 1;
+	game->camera_x = 2 * i / (double)SCREEN_WIDHT - 1;
 	game->rays->ray_dir_x = player->dir_x
 		+ player->plane_x * game->camera_x;
 	game->rays->ray_dir_y = player->dir_y + player->plane_y * game->camera_x;

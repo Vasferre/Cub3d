@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_init.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/14 15:49:41 by vasferre          #+#    #+#             */
+/*   Updated: 2024/08/14 16:43:51 by vasferre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	ft_init_moves(t_game *game)
@@ -52,14 +64,15 @@ void	ft_initializer(t_game *game)
 	map = malloc(sizeof(t_map));
 	mlx = malloc(sizeof(t_mlx));
 	player = malloc(sizeof(t_player));
-	/* create_rays(game);
-	mlx->mlx_ptr = mlx_init();
-	mlx->win_ptr = mlx_new_window(mlx->mlx, SCREEN_WIDHT, SCREEN_HEIGHT, "Cub3D"); */
+	create_rays(game);
+	mlx->mlx = mlx_init();
+	mlx->win_ptr = mlx_new_window(mlx->mlx, SCREEN_WIDHT,
+			SCREEN_HEIGHT, "Cub3D");
 	game->info = info;
 	game->map = map;
 	game->mlx = mlx;
 	game->player = player;
-	player->n_player = 0;	
+	player->n_player = 0;
 	ft_init_colors(game->info);
 	ft_init_textures(game->info);
 	ft_init_moves(game);
