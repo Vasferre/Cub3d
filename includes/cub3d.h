@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <math.h>
 #include "../mlx/mlx.h"
 #include "../libs/get_next_line/get_next_line.h"
 

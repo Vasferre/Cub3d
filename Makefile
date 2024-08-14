@@ -2,7 +2,7 @@
 NAME = cub3D
 CC = cc -Wall -Wextra -Werror
 RM = rm -rf
-MLXFLAGS = -L ./mlx -lm -Ilmlx -lXext -lX11
+MLXFLAGS = -lm -L ./mlx -lmlx -Ilmlx_linux -lXext -lX11 -lbsd
 LIBFT = ./libs/libft/libft.a ./libs/get_next_line/get_next_line.a
 
 SRCS = ./srcs/destroy/free_all.c ./srcs/player/movement.c ./srcs/player/player_check.c \
