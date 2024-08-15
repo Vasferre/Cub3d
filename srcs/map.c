@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:51 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:54:49 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 17:18:54 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ int	ft_render_map(t_game *game)
 		else
 			color = ft_create_argb(TRANSPARENCY, game->info->floor[0],
 					game->info->floor[1], game->info->floor[2]);
-		while (++j < SCREEN_WIDTH)
+		while (++j < SCREEN_WIDHT)
 			my_mlx_pixel_put(&game->mlx->map, j, i, color);
 	}
-	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win,
+	mlx_put_image_to_window(game->mlx->mlx, game->mlx->win_ptr,
 		game->mlx->map.img, 0, 0);
 	ft_cast_rays(game);
-	ft_render_mini_map(game->mlx, game->map, game->player, game->rays);
 	ft_movements(game, game->player, game->moves);
 	return (0);
 }

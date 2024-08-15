@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:52:12 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:06:26 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:28:40 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@
 # define SCREEN_WIDHT 1920
 # define SCREEN_HEIGHT 1080
 # define TILE_SOZE 30
-# define FOV 60
-# define ROTATION_SPEED 0.045
+# define FOV 0.60
+# define ROTATION_SPEED 0.1745
 # define MAX 1e30
-# define PLAYER_SPEED 2
+# define PLAYER_SPEED 0.05
 # define PI 3.14159265359
 # define SQUARE_SIZE 16
 # define TRANSPARENCY 0x00980088
@@ -78,8 +78,6 @@ typedef struct s_player
 	double	p_x;
 	double	p_y;
 	double	dir_x;
-	double	plane_x;
-	double	plane_y;
 	double	dir_y;
 	double	angle;
 	int		n_player;

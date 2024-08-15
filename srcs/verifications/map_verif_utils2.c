@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_verif_utils2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:19 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:34:41 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:28:20 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	set_y_axis(t_player *player, double plane_x,
 	double dir_y, double angle)
 {
-	player->plane_x = plane_x;
+	player->p_x = plane_x;
 	player->dir_y = dir_y;
 	player->angle = angle;
 }
@@ -23,7 +23,7 @@ void	set_y_axis(t_player *player, double plane_x,
 void	set_x_axis(t_player *player, double plane_y,
 	double dir_x, double angle)
 {
-	player->plane_y = plane_y;
+	player->p_y = plane_y;
 	player->dir_x = dir_x;
 	player->angle = angle;
 }

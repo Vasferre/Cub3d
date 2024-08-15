@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_verif.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:23 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:34:09 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:29:05 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_init_player_direction(char c, t_player *player)
 {
 	if (c == 'N' || c == 'S')
 	{
-		player->plane_y = 0;
+		player->p_y = 0;
 		player->dir_x = 0;
 		if (c == 'N')
 			set_y_axis(player, FOV, -1, 90);
@@ -41,7 +41,7 @@ void	ft_init_player_direction(char c, t_player *player)
 	}
 	else
 	{
-		player->plane_x = 0;
+		player->p_x = 0;
 		player->dir_y = 0;
 		if (c == 'W')
 			set_x_axis(player, -FOV, -1, 180);

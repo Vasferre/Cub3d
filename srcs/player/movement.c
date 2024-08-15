@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movement.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:48:47 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:25:26 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:51:18 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ bool	ft_cardinal_dir(int key_code, t_player *player, t_game *game)
 	if (key_code == A)
 		colision(player->x - x_value, player->y - y_value, game);
 	if (key_code == D)
-		colision(player->x + x_value, player->y - y_value, game);
+		colision(player->x + x_value, player->y + y_value, game);
 	return (true);
 }
 
@@ -55,7 +55,7 @@ void	ft_movement(t_player *player, int key_code, t_game *game)
 	x_value = player->dir_x * PLAYER_SPEED;
 	y_value = player->dir_y * PLAYER_SPEED;
 	if (key_code == W)
-		colision(player->x + x_value, player->y - y_value, game);
+		colision(player->x + x_value, player->y + y_value, game);
 	else if (key_code == S)
 		colision(player->x - x_value, player->y - y_value, game);
 	else if (!ft_cardinal_dir(key_code, player, game))
@@ -83,7 +83,7 @@ void	ft_rotation(t_player *player, int key_code)
 	if (key_code == LEFT)
 		rotation *= -1;
 	player->dir_x = old_dirx * cos(rotation) - player->dir_y * sin(rotation);
-	player->dir_x = old_dirx * sin(rotation) - player->dir_y * cos(rotation);
+	player->dir_y = old_dirx * sin(rotation) + player->dir_y * cos(rotation);
 	player->p_x = old_planex * cos(rotation) - player->p_y
 		* sin(rotation);
 	player->p_y = old_planex * sin(rotation) + player->p_y
@@ -97,9 +97,8 @@ void	ft_rotation(t_player *player, int key_code)
 
 void	hooks(t_game *game)
 {
-	(void) game;
 	mlx_hook(game->mlx->win_ptr, 2, 1L << 0, key_press, game);
-	mlx_hook(game->mlx->win_ptr, 3, 1L << 1, key_press, game);
+	mlx_hook(game->mlx->win_ptr, 3, 1L << 1, key_release, game);
 	mlx_hook(game->mlx->win_ptr, 17, (1L << 2), quit_cub, game);
 	mlx_loop_hook(game->mlx->mlx, ft_render_map, game);
 	mlx_loop(game->mlx->mlx);

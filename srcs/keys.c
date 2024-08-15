@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:47 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:54:42 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:47:57 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ void	ft_moves(t_game *game, t_player *player, t_moves *moves)
 		ft_movement(player, A, game);
 	if (moves->left_press)
 		ft_rotation(player, LEFT);
-	if (moves->w_press)
+	if (moves->right_press)
 		ft_rotation(player, RIGHT);
 }

@@ -1,6 +1,6 @@
 
 NAME = cub3D
-CC = cc -Wall -Wextra -Werror -fsanitize=address
+CC = cc -Wall -Wextra -Werror
 RM = rm -rf
 MLXFLAGS = -lm -L ./mlx -lmlx -Ilmlx_linux -lXext -lX11 -lbsd
 LIBFT = ./libs/libft/libft.a ./libs/get_next_line/get_next_line.a

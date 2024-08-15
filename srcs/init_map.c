@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasferre <vasferre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:45 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/14 16:46:26 by vasferre         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:25:22 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_init_ray(t_game *game, t_player *player, int i)
 	game->map->map_y = (int)player->y;
 	game->camera_x = 2 * i / (double)SCREEN_WIDHT - 1;
 	game->rays->ray_dir_x = player->dir_x
-		+ player->plane_x * game->camera_x;
-	game->rays->ray_dir_y = player->dir_y + player->plane_y * game->camera_x;
+		+ player->p_x * game->camera_x;
+	game->rays->ray_dir_y = player->dir_y + player->p_y * game->camera_x;
 	game->rays->line_height = -1;
 	game->hit_wall = 0;
 }
