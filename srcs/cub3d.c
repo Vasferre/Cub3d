@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasco <vasco@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:35 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/15 21:23:26 by vasco            ###   ########.fr       */
+/*   Updated: 2024/08/19 19:05:01 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	main(int argc, char **argv)
 	ft_initial_validation(argv[1], game);
 	ft_render_map(game);
 	hooks(game);
-	ft_panic(game);
+	quit_cub(game);
 }

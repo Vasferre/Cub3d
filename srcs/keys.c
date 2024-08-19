@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vasco <vasco@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:47 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/16 02:53:20 by vasco            ###   ########.fr       */
+/*   Updated: 2024/08/19 19:07:50 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	quit_cub(t_game *game)
 	game->exit = 1;
 	ft_panic(game);
 	(void)game;
-	exit(0);
+	exit(EXIT_SUCCESS);
 }
 
 int	handle_keys(int key, int flag, t_moves *moves)
@@ -47,6 +47,8 @@ int	key_press(int key, t_game *game)
 
 int	key_release(int key, t_game *game)
 {
+	if (key == ESC)
+		quit_cub(game);
 	handle_keys(key, 0, game->moves);
 	return (0);
 }

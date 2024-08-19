@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:23 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/15 16:29:05 by mrichard         ###   ########.fr       */
+/*   Updated: 2024/08/19 19:01:05 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ bool	ft_map_file(t_map *map)
 	}
 	ft_map_array(map);
 	close(map_file);
+	printf("TESTE\n");
 	return (true);
 }
 
