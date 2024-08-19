@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_verif_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
+/*   By: vasco <vasco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:15 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/15 17:14:13 by mrichard         ###   ########.fr       */
+/*   Updated: 2024/08/15 21:46:15 by vasco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ bool	ft_check_sides(t_map *map, int y, int x)
 
 bool	ft_is_valid_map(t_game *game)
 {
-	if (!ft_map_file(game->map))
+	if (!ft_map_file(game->map))	
 		return (false);
 	if (!ft_check_map(game->map, game->player))
 		return (false);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
+/*   By: vasco <vasco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:52:12 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/15 16:28:40 by mrichard         ###   ########.fr       */
+/*   Updated: 2024/08/16 02:13:08 by vasco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@
 # define D 100
 # define LEFT 65361
 # define RIGHT 65363
-# define MAP "map_file"
 
+# define MAP "map_file"
 # define SCREEN_WIDHT 1920
 # define SCREEN_HEIGHT 1080
 # define TILE_SOZE 30
