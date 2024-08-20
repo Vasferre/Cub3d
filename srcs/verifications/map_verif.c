@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:49:23 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/19 19:01:05 by mrichard         ###   ########.fr       */
+/*   Updated: 2024/08/20 18:00:24 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	ft_map_array(t_map *map)
 	while (++i < map->n_lines)
 		map->map_array[i] = calloc(sizeof(char), map->n_col + 1);
 	get_map_array(map, map_file);
-	if (map_file > 0)
-		close(map_file);
+	close(map_file);
 }
 
 void	ft_init_player_direction(char c, t_player *player)
@@ -84,9 +83,8 @@ bool	ft_map_file(t_map *map)
 		free(line);
 		line = get_next_line(map_file);
 	}
-	ft_map_array(map);
 	close(map_file);
-	printf("TESTE\n");
+	ft_map_array(map);
 	return (true);
 }
 

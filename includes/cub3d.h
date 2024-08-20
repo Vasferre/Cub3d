@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42porto.pt>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:52:12 by vasferre          #+#    #+#             */
-/*   Updated: 2024/08/19 17:26:42 by mrichard         ###   ########.fr       */
+/*   Updated: 2024/08/20 17:47:25 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,6 @@ typedef struct s_game
 char	*get_next_line(int fd);
 int		ft_panic(t_game *game);
 void	fr_free_ray(t_ray *rays);
-void	ft_map_array(t_map *map);
 void	ft_free_text(t_game *game);
 void	ft_initial_validation(char *str, t_game *game);
 void	ft_free_mlx(t_game *game);
